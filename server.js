@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+
+const port = process.env.PORT || 3200;
 var app = express();
 
 
@@ -55,6 +57,6 @@ app.get('/bad',(req, res)=>{
 
 
 //local host - 3200 ...
-app.listen(3200, ()=>{
-    console.log('Server is up on port 3200');
+app.listen(port, ()=>{
+    console.log(`Server in up on port ${port}`);
 });
